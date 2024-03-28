@@ -1,7 +1,7 @@
 import streamlit as st
 from pymongo import MongoClient
 
-st.set_page_config(page_title='Junia LLM', page_icon=":mortar_board:")
+st.set_page_config(page_title='Junia LLM')
 
 # Connexion à la base de données
 @st.cache_resource
@@ -50,24 +50,3 @@ if st.button("Ajouter"):
         st.success("Question et réponse envoyées avec succès !")
         question = ""
         reponse = ""
-
-# CSS inline pour styliser les éléments
-st.markdown(
-    """
-    <style>
-        .stButton>button {
-            color: #ffffff;
-            background-color: #228B22;
-            font-size: 20px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .stButton>button:hover {
-            color: #dddddd;
-            border-color: #228B22;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
