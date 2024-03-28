@@ -1,6 +1,8 @@
 import streamlit as st
 from pymongo import MongoClient
 
+st.set_page_config(page_title='Junia LLM', page_icon=":mortar_board:")
+
 # Connexion à la base de données
 @st.cache_resource
 def init_connection():
@@ -11,7 +13,6 @@ db = client["JuniaLLM"]
 collection = db["Q&R"]
 
 # Page title
-st.set_page_config(page_title='Junia LLM', page_icon=":mortar_board:")
 st.title('Junia LLM')
 st.markdown("---")
 st.info("Veuillez entrer une question et une réponse en rapport avec Junia, l'ISEN, l'école...\nVoir les exemples ci-dessous.")
