@@ -2,7 +2,11 @@ import streamlit as st
 from pymongo import MongoClient
 
 # Connexion à la base de données
-client = MongoClient(st.secrets["KEY"])
+@st.cache_resource
+def init_connection():
+    return MongoClient(st.secrets["KEY"])
+
+client = init_connection()
 db = client["JuniaLLM"]
 collection = db["Q&R"]
 
