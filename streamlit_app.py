@@ -48,5 +48,5 @@ if st.button("Ajouter"):
         doc = {"instruction": question, "output": reponse}
         collection.insert_one(doc)
         st.success("Question et réponse envoyées avec succès !")
-        question = ""
-        reponse = ""
+        st.question = ""
+        st.reponse = ""
