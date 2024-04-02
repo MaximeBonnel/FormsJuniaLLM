@@ -50,3 +50,4 @@ if st.button("Ajouter"):
         st.success("Question et réponse envoyées avec succès !")
         st.question = ""
         st.reponse = ""
+        st.experimental_rerun()
